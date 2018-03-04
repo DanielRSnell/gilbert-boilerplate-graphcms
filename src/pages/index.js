@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Link from 'gatsby-link';
 import { Col, Row } from 'antd';
 import BlogList from '../components/index/BlogList.js';
 import '../components/index/index.css';
+
 class Home extends Component {
 	render() {
 		console.log(this.props.data.posts.edges);

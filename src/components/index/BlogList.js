@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'antd';
+import Link from 'gatsby-link';
 
 class BlogList extends Component {
 	render() {
@@ -25,7 +26,9 @@ class BlogList extends Component {
 							<div dangerouslySetInnerHTML={{ __html: item.node.content }} />
 						</Row>
 						<Row className="post-list-action">
-							<Button>READ MORE</Button>
+							<Link to={`/${item.node.slug}`}>
+								<Button>READ MORE</Button>
+							</Link>
 						</Row>
 					</Row>
 				))}
